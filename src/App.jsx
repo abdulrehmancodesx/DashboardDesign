@@ -7,6 +7,7 @@ import CRM from './pages/CRM';
 import Audience from './pages/Audience';
 import Settings from './pages/Settings';
 import PlaceholderPage from './pages/PlaceholderPage';
+import V2Dashboard from './pages/V2Dashboard';
 
 function App() {
   return (
@@ -45,6 +46,10 @@ function App() {
           {/* Fallback route */}
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Route>
+
+        {/* New V2 Dashboard full-black workspace */}
+        <Route path="/v2" element={<V2Dashboard />} />
+        <Route path="/v2/:subpage" element={<V2Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

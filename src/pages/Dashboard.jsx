@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CustomBarChart from '../components/CustomBarChart';
@@ -32,8 +33,11 @@ function Dashboard() {
     <div className="space-y-6">
       {/* 1. TOP HEADER CAPSULE */}
       <header className="bg-white/95 backdrop-blur-md px-8 py-4.5 rounded-[2rem] shadow-sm border border-slate-200/80 flex flex-row justify-between items-center transition-all select-none">
-        <div>
+        <div className="flex items-center gap-4">
           <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight leading-none">Hint.</h1>
+          <Link to="/v2" className="bg-[#5D4DFF] hover:bg-[#4d3ee6] text-white text-xs font-semibold px-4 py-2 rounded-full transition-all cursor-pointer shadow-sm shadow-[#5D4DFF]/15">
+            Go to V2
+          </Link>
         </div>
         
         {/* Header Action Tools mapping the second reference image */}
